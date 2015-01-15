@@ -38,6 +38,42 @@ class TestBoard(unittest.TestCase):
 
         self.assertEqual(self.board.get_card(0, 0), self.sample_card)
 
+class TestWins(unittest.TestCase):
+    """
+    Specific test suite for checking win states
+    """
+
+    def setUp(self):
+        """
+        Initialize boards for testing purposes
+        """
+        self.board_A_win = Board()
+        self.board_B_win = Board()
+        self.board_draw = Board()
+
+        self.card1 = Card([1, 1, 1, 1], 'A')
+        self.card2 = Card([1, 1, 1, 1], 'A')
+        self.card3 = Card([1, 1, 1, 1], 'A')
+        self.card4 = Card([1, 1, 1, 1], 'A')
+        self.card5 = Card([1, 1, 1, 1], 'A')
+        self.card6 = Card([1, 1, 1, 1], 'A')
+        self.card7 = Card([1, 1, 1, 1], 'B')
+        self.card8 = Card([1, 1, 1, 1], 'B')
+        self.card9 = Card([1, 1, 1, 1], 'B')
+        self.card10 = Card([1, 1, 1, 1], 'B')
+
+        self.board_A_win.place(card1, 0, 0)
+        self.board_A_win.place(card2, 0, 1)
+        self.board_A_win.place(card3, 0, 2)
+        self.board_A_win.place(card4, 1, 0)
+        self.board_A_win.place(card5, 1, 2)
+        self.board_A_win.place(card6, 1, 3)
+        self.board_A_win.place(card7, 2, 0)
+        self.board_A_win.place(card8, 2, 1)
+        self.board_A_win.place(card9, 2, 2)
+
+
+    def test_check_win_A(self):
 
 class TestCards(unittest.TestCase):
     """

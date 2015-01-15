@@ -11,8 +11,8 @@ class TestBoard(unittest.TestCase):
 	def test_empty(self):
 		"""
 		Test board constructor to ensure an empty board is created properly.
-		REMEMBER: Each list is an individual column!
-		ex. board[0][2] is the 0th column, 3rd item down.
+		REMEMBER: Each list is an individual row!
+		ex. board[0][2] is the 0th row, 3rd item across.
 		"""
 		self.assertEqual(Board(), [['x', 'x', 'x'], ['x','x', 'x'], ['x', 'x', 'x']])
 

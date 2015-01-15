@@ -1,7 +1,8 @@
 # Triple TriPy Testing suite
 
 import unittest
-# from tripleTriPy import tripleTriPy
+from Board import *
+from Card import *
 
 class TestBoard(unittest.TestCase):
     """
@@ -14,7 +15,11 @@ class TestBoard(unittest.TestCase):
 		REMEMBER: Each list is an individual row!
 		ex. board[0][2] is the 0th row, 3rd item across.
 		"""
-        self.assertEqual(Board(), [['x', 'x', 'x'], ['x', 'x', 'x'], ['x', 'x', 'x']])
+        self.board = Board()
+        self.assertEqual(self.board.state[0], ['x', 'x', 'x'])
+        self.assertEqual(self.board.state[1], ['x', 'x', 'x'])
+        self.assertEqual(self.board.state[2], ['x', 'x', 'x'])
+
 
     def test_get_card_empty(self):
         """
@@ -27,11 +32,11 @@ class TestBoard(unittest.TestCase):
         """
 		Test board state is correct after placing a card
 		"""
-        self.sample_card = Card([2, 8, 4, 8], B)
+        self.sample_card = Card([2, 8, 4, 8], 'A')
         self.board = Board()
-        self.board.place(sample_card, 0, 0)
+        self.board.place(self.sample_card, 0, 0)
 
-        self.assertEqual(self.board.get_card(0, 0), sample_card)
+        self.assertEqual(self.board.get_card(0, 0), self.sample_card)
 
 
 class TestCards(unittest.TestCase):
@@ -51,10 +56,10 @@ class TestCards(unittest.TestCase):
 		   		|    8    |
 		   		-----------
 		"""
-        self.sample_card = Card([2, 8, 4, 8], A)
+        self.sample_card = Card([2, 8, 4, 8], 'A')
         self.assertEqual(self.sample_card.top(), 2)
         self.assertEqual(self.sample_card.bottom(), 8)
         self.assertEqual(self.sample_card.left(), 4)
         self.assertEqual(self.sample_card.right(), 8)
-        self.assertEqual(self.sample_card.owner(), A)
+        self.assertEqual(self.sample_card.owner(), 'A')
 

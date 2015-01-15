@@ -10,7 +10,7 @@ class Board(object):
 	"""
 
 	def __init__(self):
-		state = [['x', 'x', 'x'], ['x', 'x', 'x'], ['x', 'x', 'x']]
+		self.state = [['x', 'x', 'x'], ['x', 'x', 'x'], ['x', 'x', 'x']]
 
 	def __eq__(self, other):
 		return self.state == other.state

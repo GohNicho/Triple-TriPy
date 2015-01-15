@@ -11,3 +11,19 @@ class Board(object):
 
 	def __init__(self):
 		state = [['x', 'x', 'x'], ['x', 'x', 'x'], ['x', 'x', 'x']]
+
+	def __eq__(self, other):
+		return self.state == other.state
+
+	def get_card(self, row, col):
+		"""
+		Return the card stored in row row and col col of board
+		"""
+		return self.state[row][col]
+
+	def place(self, card, row, col):
+		"""
+		Return none, and adds Card card to state of board
+		"""
+		self.state[row][col] = card
+		return None 

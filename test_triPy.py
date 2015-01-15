@@ -16,6 +16,23 @@ class TestBoard(unittest.TestCase):
 		"""
 		self.assertEqual(Board(), [['x', 'x', 'x'], ['x','x', 'x'], ['x', 'x', 'x']])
 
+	def test_get_card_empty(self):
+		"""
+		Test getting card in empty slot
+		"""
+		self.board = Board()
+		self.assertEqual(self.board.get_card(1, 1), 'x')
+
+	def test_place_get_card(self):
+		"""
+		Test board state is correct after placing a card
+		"""
+		self.sample_card = Card([2, 8, 4, 8], B)
+		self.board = Board()
+		self.board.place(sample_card, 0, 0)
+
+		self.assertEqual(self.board.get_card(0, 0), sample_card)
+
 class TestCards(unittest.TestCase):
 	"""
 	Test suite for card functions.
@@ -39,3 +56,4 @@ class TestCards(unittest.TestCase):
 		self.assertEqual(self.sample_card.left(), 4)
 		self.assertEqual(self.sample_card.right(), 8)
 		self.assertEqual(self.sample_card.owner(), A)
+

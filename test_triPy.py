@@ -61,19 +61,46 @@ class TestWins(unittest.TestCase):
         self.card8 = Card([1, 1, 1, 1], 'B')
         self.card9 = Card([1, 1, 1, 1], 'B')
         self.card10 = Card([1, 1, 1, 1], 'B')
+        self.card11 = Card([1, 1, 1, 1], 'B')
 
         self.board_A_win.place(self.card1, 0, 0)
         self.board_A_win.place(self.card2, 0, 1)
         self.board_A_win.place(self.card3, 0, 2)
         self.board_A_win.place(self.card4, 1, 0)
-        self.board_A_win.place(self.card5, 1, 2)
-        self.board_A_win.place(self.card6, 1, 3)
+        self.board_A_win.place(self.card5, 1, 1)
+        self.board_A_win.place(self.card6, 1, 2)
         self.board_A_win.place(self.card7, 2, 0)
         self.board_A_win.place(self.card8, 2, 1)
         self.board_A_win.place(self.card9, 2, 2)
 
+        self.board_B_win.place(self.card10, 0, 0)
+        self.board_B_win.place(self.card2, 0, 1)
+        self.board_B_win.place(self.card3, 0, 2)
+        self.board_B_win.place(self.card4, 1, 0)
+        self.board_B_win.place(self.card5, 1, 1)
+        self.board_B_win.place(self.card6, 1, 2)
+        self.board_B_win.place(self.card7, 2, 0)
+        self.board_B_win.place(self.card8, 2, 1)
+        self.board_B_win.place(self.card9, 2, 2)
+
+        self.board_draw.place(self.card10, 0, 0)
+        self.board_draw.place(self.card11, 0, 1)
+        self.board_draw.place(self.card3, 0, 2)
+        self.board_draw.place(self.card4, 1, 0)
+        self.board_draw.place(self.card5, 1, 1)
+        self.board_draw.place(self.card6, 1, 2)
+        self.board_draw.place(self.card7, 2, 0)
+        self.board_draw.place(self.card8, 2, 1)
+        self.board_draw.place(self.card9, 2, 2)
+
+
 
     def test_check_win_A(self):
+        """
+        Checks board in the case of a victory by player A
+        """
+
+
 
 class TestCards(unittest.TestCase):
     """

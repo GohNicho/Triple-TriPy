@@ -74,7 +74,7 @@ class TestWins(unittest.TestCase):
         self.board_A_win.place(self.card9, 2, 2)
 
         self.board_B_win.place(self.card10, 0, 0)
-        self.board_B_win.place(self.card2, 0, 1)
+        self.board_B_win.place(self.card11, 0, 1)
         self.board_B_win.place(self.card3, 0, 2)
         self.board_B_win.place(self.card4, 1, 0)
         self.board_B_win.place(self.card5, 1, 1)
@@ -84,7 +84,7 @@ class TestWins(unittest.TestCase):
         self.board_B_win.place(self.card9, 2, 2)
 
         self.board_draw.place(self.card10, 0, 0)
-        self.board_draw.place(self.card11, 0, 1)
+        self.board_draw.place(self.card2, 0, 1)
         self.board_draw.place(self.card3, 0, 2)
         self.board_draw.place(self.card4, 1, 0)
         self.board_draw.place(self.card5, 1, 1)

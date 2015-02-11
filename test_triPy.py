@@ -20,7 +20,6 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(self.board.state[1], ['x', 'x', 'x'])
         self.assertEqual(self.board.state[2], ['x', 'x', 'x'])
 
-
     def test_get_card_empty(self):
         """
 		Test getting card in empty slot
@@ -93,13 +92,11 @@ class TestWins(unittest.TestCase):
         self.board_draw.place(self.card8, 2, 1)
         self.board_draw.place(self.card9, 2, 2)
 
-
-
     def test_check_win_A(self):
         """
         Checks board in the case of a victory by player A
         """
-
+        pass
 
 
 class TestCards(unittest.TestCase):
